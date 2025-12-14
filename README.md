@@ -60,7 +60,7 @@ Cross-attention (Transformers)
 The late-fusion SwinUNETR model achieved the best overall performance on the external test cohort
 
 🗂 Repository Structure
-`bash
+```bash
 ISRT-CTV-AutoSeg/
 ├── configs/                # Training and inference configuration files
 ├── data/                   # Dataset structure templates and preprocessing
@@ -70,5 +70,5 @@ ISRT-CTV-AutoSeg/
 ├── utils/                  # Metrics, I/O, logging utilities
 ├── requirements.txt        # Python dependencies
 └── README.md
-`
+```
 
