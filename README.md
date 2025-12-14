@@ -72,3 +72,36 @@ ISRT-CTV-AutoSeg/
 └── README.md
 ```
 
+⚙️ Installation
+1. Clone the Repository
+```bash
+git clone https://github.com/xtie97/ISRT-CTV-AutoSeg.git
+cd ISRT-CTV-AutoSeg
+```
+
+2. Docker imaging
+```bash
+conda create -n isrt_ctv python=3.8 -y
+conda activate isrt_ctv
+```
+
+🚀 Training
+```bash
+python training/train.py \
+  --config configs/train_swinunetr_late_fusion.yaml
+```
+
+🔍 Inference
+```bash
+python inference/run_inference.py \
+  --config configs/infer.yaml \
+  --checkpoint path/to/model.pth
+```
+
+Sliding-window inference
+
+Gaussian blending
+
+Ensemble averaging
+
+Output: binary CTV mask (NIfTI)
