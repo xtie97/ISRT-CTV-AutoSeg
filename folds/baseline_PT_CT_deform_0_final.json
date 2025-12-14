@@ -1,0 +1,69 @@
+{
+    "labels": {
+        "0": "background",
+        "1": "CTV"
+    },
+    "modality": {
+        "image": "PT",
+        "image0": "CT",
+        "image1": "CT",
+        "image2": "PT",
+        "image3": "CT"
+    },
+    "testing": [
+        {
+            "image": "PET_CT_deform_reg/85XXXX_PT_SUV_baseline.nii.gz",
+            "image0": "nifti/85XXXX_CT.nii.gz",
+            "image1": "PET_CT_deform_reg/85XXXX_CT_baseline.nii.gz",
+            "image2": "PET_CT_deform_reg/85XXXX_PT_SUV_interim.nii.gz",
+            "image3": "PET_CT_deform_reg/85XXXX_CT_interim.nii.gz",
+            "label": "CTV/85XXXX_CTV.nii.gz"
+        },
+        {
+            "image": "PET_CT_deform_reg/86XXXX_PT_SUV_baseline.nii.gz",
+            "image0": "nifti/86XXXX_CT.nii.gz",
+            "image1": "PET_CT_deform_reg/86XXXX_CT_baseline.nii.gz",
+            "image2": "PET_CT_deform_reg/86XXXX_PT_SUV_interim.nii.gz",
+            "image3": "PET_CT_deform_reg/86XXXX_CT_interim.nii.gz",
+            "label": "CTV/86XXXX_CTV.nii.gz"
+        }
+    ],
+    "training": [
+        {
+            "fold": 0,
+            "image": "PET_CT_deform_reg/80XXXX_PT_SUV_baseline.nii.gz",
+            "image0": "nifti/80XXXX_CT.nii.gz",
+            "image1": "PET_CT_deform_reg/80XXXX_CT_baseline.nii.gz",
+            "image2": "PET_CT_deform_reg/80XXXX_PT_SUV_interim.nii.gz",
+            "image3": "PET_CT_deform_reg/80XXXX_CT_interim.nii.gz",
+            "label": "CTV/80XXXX_CTV.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": "PET_CT_deform_reg/81XXXX_PT_SUV_baseline.nii.gz",
+            "image0": "nifti/81XXXX_CT.nii.gz",
+            "image1": "PET_CT_deform_reg/81XXXX_CT_baseline.nii.gz",
+            "image2": "PET_CT_deform_reg/81XXXX_PT_SUV_interim.nii.gz",
+            "image3": "PET_CT_deform_reg/81XXXX_CT_interim.nii.gz",
+            "label": "CTV/81XXXX_CTV.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": "PET_CT_deform_reg/82XXXX_PT_SUV_baseline.nii.gz",
+            "image0": "nifti/82XXXX_CT.nii.gz",
+            "image1": "PET_CT_deform_reg/82XXXX_CT_baseline.nii.gz",
+            "image2": "PET_CT_deform_reg/82XXXX_PT_SUV_interim.nii.gz",
+            "image3": "PET_CT_deform_reg/82XXXX_CT_interim.nii.gz",
+            "label": "CTV/82XXXX_CTV.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": "PET_CT_deform_reg/83XXXX_PT_SUV_baseline.nii.gz",
+            "image0": "nifti/83XXXX_CT.nii.gz",
+            "image1": "PET_CT_deform_reg/83XXXX_CT_baseline.nii.gz",
+            "image2": "PET_CT_deform_reg/83XXXX_PT_SUV_interim.nii.gz",
+            "image3": "PET_CT_deform_reg/83XXXX_CT_interim.nii.gz",
+            "label": "CTV/83XXXX_CTV.nii.gz"
+        }
+    ]
+}

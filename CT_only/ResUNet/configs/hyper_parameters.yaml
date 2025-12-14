@@ -1,0 +1,76 @@
+_meta_: {}
+name: ISRT_CT_Segmentation
+modality: CT # CT, PET, or MRI
+# multi-input 
+# modality: PET
+# extra_modalities: {image1: CT, image2: PET, image3: CT, image0: CT} # baseline PT/CT, interim PT/CT, planning CT
+# extra_modalities: {image1: CT, image0: CT}
+input_channels: 1
+
+# specify the data and model paths
+dataroot: /UserData/.../data/voxel_median
+datalist: /UserData/.../folds/CT_only_0_final.json
+random_state: 0
+data_file_base_dir: $@dataroot
+data_list_file_path: $@datalist
+bundle_root: null
+
+# specify the model checkpoint path
+fold: 3
+ckpt_path: $@bundle_root + "/ckpt_final_f3" 
+finetune: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt'}
+
+# specify the training hyper-parameters
+num_samples: 2
+batch_size: 3
+crop_ratios: [1, 2] # Bg, CTV
+roi_size: [192, 192, 96] 
+num_workers: 8
+num_epochs: 300 # 300, 400
+
+# specify the optimizer and learning rate
+learning_rate: 0.0001
+optimizer: {_target_: torch.optim.AdamW, lr: '@learning_rate', weight_decay: 1.0e-05}
+nnunet_scheduler: false # LambdaLR, otherwise, WarmupConsineAnnealingLR
+
+# define the network architecture
+network:
+  {_target_: ResUNet,
+  use_nnunet_filters: true, # false use Brats2021 BEST filters
+  norm: INSTANCE, # INSTANCE , BATCH
+  dsdepth: 3}
+sigmoid: false
+output_classes: 2
+class_names: [CTV]
+
+# set training hyper-parameters
+validate: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt'}
+infer: {enabled: false, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
+    + '/prediction_final_f3', data_list_key: testing}  
+
+loss_fun: DiceCELoss
+loss: {_target_: $@loss_fun, include_background: false, squared_pred: false, smooth_nr: 1.0e-05,
+  smooth_dr: 1.0e-05, softmax: $not @sigmoid, sigmoid: $@sigmoid, to_onehot_y: $not
+    @sigmoid, batch: true} 
+
+# image and label preprocessing
+resample: false
+resample_resolution: [1.0, 1.0, 2.5]
+crop_mode: ratio
+num_epochs_per_validation: 2
+num_epochs_per_saving: 2
+
+# other settings
+quick: false # for quick test (8 cases)
+amp: true # automatic mixed precision (reduced memory usage)
+ckpt_save: true # save model checkpoints
+cache_rate: null 
+is_cache: false
+determ: true
+rng_seed: 716 # random seed for reproducibility
+normalize_mode: range # for PET or CT 
+multigpu: true
+
+image_size: [469, 261, 189]
+class_index: null
+intensity_bounds: [118.71328927675883, 687.8317456563313]

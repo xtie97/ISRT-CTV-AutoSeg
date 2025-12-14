@@ -1,0 +1,41 @@
+{
+    "labels": {
+        "0": "background",
+        "1": "CTV"
+    },
+    "modality": {
+        "image": "CT"
+    },
+    "testing": [
+        {
+            "image": "nifti/85XXXX_CT.nii.gz",
+            "label": "CTV/85XXXX_CTV.nii.gz"
+        },
+        {
+            "image": "nifti/86XXXX_CT.nii.gz",
+            "label": "CTV/86XXXX_CTV.nii.gz"
+        }
+    ],
+    "training": [
+        {
+            "fold": 0,
+            "image": "nifti/80XXXX_CT.nii.gz",
+            "label": "CTV/80XXXX_CTV.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": "nifti/81XXXX_CT.nii.gz",
+            "label": "CTV/81XXXX_CTV.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": "nifti/82XXXX_CT.nii.gz",
+            "label": "CTV/82XXXX_CTV.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": "nifti/83XXXX_CT.nii.gz",
+            "label": "CTV/83XXXX_CTV.nii.gz"
+        }
+    ]
+}
