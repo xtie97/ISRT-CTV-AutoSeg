@@ -9,6 +9,7 @@ This study included planning CT, baseline PET/CT (PET1), and interim PET/CT (PET
 On the external cohort, a SwinUNETR model incorporating planning CT, PET1, and PET2 images achieved the highest performance, with a DSC of 0.72 and HD95 of 34.43 mm. All models incorporating PET/CT images were significantly better (P<0.01) than planning CT-only models. IOV analysis yielded a DSC of 0.70 and HD95 of 30.14 mm. In clinical evaluation, DL-generated CTVs received a mean quality score of 3.38 out of 5, comparable to original physician-delineated CTVs (3.13; P = 0.13)
 
 The DL model was able to generate clinically useful CTVs with quality comparable to manually delineated CTVs, suggesting its potential to improve physician efficiency in ISRT planning.
+
 ---
 
 ## Key Features
