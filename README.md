@@ -69,7 +69,7 @@ The baseline and interim PET/CT images were spatially aligned to planning CT ima
 ## 🧠 Multi-Modality Architecture
 ![Multi-modality Architecture](./fig/multi_modal.jpg)
 
-## 🚀 Training
+## 🚀 Training and Inference
 To train or evaluate the model, please go to each architecture and modify the **`configs/hyper_parameters.yaml`** file to adjust parameters (if preferred) and update the paths for your data root and data list:
 
 Starting training by runing the following command:
@@ -84,4 +84,11 @@ infer: {enabled: true, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $
 ```
 We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/6ihu7tjk2yqe75bylyy0t/h?rlkey=79nzdg6ouzx8tddot693z6c1e&st=4jlqmtvi&dl=0). These models have baseline+interim PET/CT and planning CT images as input. 
 
+## Key Results
+
+
 ## Citation 📚
+- **Blinded clinical reader study**
+![Reader Study](./fig/reader_study.jpg)
+
+
