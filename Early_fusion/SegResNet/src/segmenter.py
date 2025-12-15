@@ -1407,35 +1407,6 @@ class Segmenter:
                 )
                 os.remove(zip_file)
 
-            if epoch == 297 and use_wandb:
-                parent_dir = os.path.dirname(
-                    best_ckpt_path
-                )  # the directory where the model.pt is saved
-                pparent_dir = os.path.dirname(parent_dir)
-                config_file = os.path.join(
-                    pparent_dir, "configs", "hyper_parameters.yaml"
-                )
-                try:
-                    shutil.copyfile(
-                        config_file, os.path.join(parent_dir, "hyper_parameters.yaml")
-                    )
-                except:
-                    pass
-
-                # zip all the files in the parent_dir
-                zip_file = os.path.join(
-                    pparent_dir, f"ckpt_rng{random_state}_within300"
-                )  # the zip file to be saved
-                shutil.make_archive(zip_file, "zip", parent_dir)
-                zip_file = zip_file + ".zip"
-                run_wandb.log_model(
-                    path=zip_file,
-                    name=f"ckpt_rng{random_state}_within300",
-                    aliases=f"ckpt_rng{random_state}_within300",
-                )
-                os.remove(zip_file)
-                break
-
             torch.cuda.empty_cache()  # For GPU memory
             torch.cuda.synchronize()  # Ensures all GPU tasks are complete
 
@@ -1919,3 +1890,4 @@ if __name__ == "__main__":
     fire, fire_is_imported = optional_import("fire")
     if fire_is_imported:
         fire.Fire(main)
+
