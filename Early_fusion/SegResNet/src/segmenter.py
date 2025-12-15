@@ -939,7 +939,7 @@ class Segmenter:
             shl = shl0
 
         return shl
-
+ 
     def get_train_loader(self, data, cache_rate=0, persistent_workers=False):
 
         distributed = self.distributed
@@ -1890,4 +1890,5 @@ if __name__ == "__main__":
     fire, fire_is_imported = optional_import("fire")
     if fire_is_imported:
         fire.Fire(main)
+
 
