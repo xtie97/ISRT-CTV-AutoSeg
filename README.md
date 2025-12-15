@@ -2,6 +2,7 @@
 
 This repository contains the code for the paper [**Multi-Modality Artificial Intelligence for Involved-Site Radiation Therapy: Clinical Target Volume Delineation in High-Risk Pediatric Hodgkin Lymphoma**](https://www.redjournal.org/article/S0360-3016(25)06592-7/fulltext) published in ***International Journal of Radiation Oncology · Biology · Physics***.
 
+
 ## 📌 Overview
 
 We aim to develop automated CTV segmentation algorithms that integrated multi-modality imaging to facilitate ISRT planning.
@@ -11,6 +12,7 @@ This study included planning CT, baseline PET/CT (PET1), and interim PET/CT (PET
 On the external cohort, a SwinUNETR model incorporating planning CT, PET1, and PET2 images achieved the highest performance, with a DSC of 0.72 and HD95 of 34.43 mm. All models incorporating PET/CT images were significantly better (P<0.01) than planning CT-only models. IOV analysis yielded a DSC of 0.70 and HD95 of 30.14 mm. In clinical evaluation, DL-generated CTVs received a mean quality score of 3.38 out of 5, comparable to original physician-delineated CTVs (3.13; P = 0.13)
 
 The DL model was able to generate clinically useful CTVs with quality comparable to manually delineated CTVs, suggesting its potential to improve physician efficiency in ISRT planning.
+
 
 ## ✨ Key Points
 
@@ -44,6 +46,7 @@ ISRT-CTV-AutoSeg/
 └── README.md
 ```
 
+
 ## ⚙️ Installation
 1. **Clone the Repository**
 ```bash
@@ -61,11 +64,14 @@ cd ISRT-CTV-AutoSeg
    docker run -it --rm -v $(pwd):/workspace xtie97/monai_wb
    ```
 
+
 ## 🧩 Preprocessing 
 The baseline and interim PET/CT images were spatially aligned to planning CT images using MIM software (Cleveland, Ohio). All images were resampled to a fixed voxel size of [1.0, 1.0, 2.5] mm using bilinear interpolation. PET and CT volumes were cropped using bounding boxes derived from a SUV threshold of 0.2 on baseline PET images. PET SUVs were standardized using z-score normalization, and CT Hounsfield units were linearly scaled from [-1000, 1000] to [-1, 1].
 
+
 ## 🧠 Multi-Modality Architecture
 ![Multi-modality Architecture](./fig/multi_modal.jpg)
+
 
 ## 🚀 Training and Inference
 To train or evaluate the model, please go to each architecture and modify the **`configs/hyper_parameters.yaml`** file to adjust parameters (if preferred) and update the paths for your data root and data list:
@@ -82,14 +88,16 @@ infer: {enabled: true, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $
 ```
 We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/6ihu7tjk2yqe75bylyy0t/h?rlkey=79nzdg6ouzx8tddot693z6c1e&st=4jlqmtvi&dl=0). These models have baseline+interim PET/CT and planning CT images as input. 
 
-## Key Results
+
+## 📊 Key Results
 - **Blinded clinical reader study**: Among the 40 external test cases selected for clinical evaluation, the average quality score assigned to model-generated CTVs was 3.38 (95% CI, [3.08, 3.65]), comparable to the scores assigned to physician-generated CTVs (3.13, 95% CI [2.80, 3.45], P=0.13). Additionally, for model-generated contours, 10 cases (25.0%) required major revisions (score of 2), and 30 cases (75.0%) were considered clinically acceptable (scores of 3-5), with 23 cases (57.5%) requiring only minor or no modifications (scores of 4 or 5).
   - (A) Distribution of quality scores for physician-delineated (green) and model-generated clinical target volumes (CTVs) (red) on 40 external test cases, assessed using a 5-point Likert scale
   - (B–D) Example cases showing physician and model-generated CTVs along with their respective quality scores.
   
 ![Reader Study](./fig/reader_study.jpg)
 
-## Citation 📚
+
+## 📚 Citation
 Tie, X., Milgrom, S.A., Lo, A.C., Charpentier, A.-M., LaRiviere, M.J., Maqbool, D., Cho, S.Y., Kelly, K.M., Hodgson, D., Castellino, S.M., Hoppe, B.S., Bradshaw, T.J., Multi-Modality Artificial Intelligence for Involved-Site Radiation Therapy: Clinical Target Volume Delineation in High-Risk Pediatric Hodgkin Lymphoma. International Journal of Radiation Oncology, Biology, Physics. https://doi.org/10.1016/j.ijrobp.2025.12.005
 
 
