@@ -1,6 +1,6 @@
 # Multi-Modality Artificial Intelligence for Involved-Site Radiation Therapy: Clinical Target Volume Delineation in High-Risk Pediatric Hodgkin Lymphoma
 
-This repository contains the code for the paper [**Multi-Modality Artificial Intelligence for Involved-Site Radiation Therapy: Clinical Target Volume Delineation in High-Risk Pediatric Hodgkin Lymphoma**](https://www.redjournal.org/article/S0360-3016(25)06592-7/fulltext) (published in *Red Journal*)
+This repository contains the code for the paper [**Multi-Modality Artificial Intelligence for Involved-Site Radiation Therapy: Clinical Target Volume Delineation in High-Risk Pediatric Hodgkin Lymphoma**](https://www.redjournal.org/article/S0360-3016(25)06592-7/fulltext) published in *International Journal of Radiation Oncology · Biology · Physics*.
 
 ## 📌 Overview
 
