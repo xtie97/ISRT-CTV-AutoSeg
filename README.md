@@ -67,25 +67,21 @@ cd ISRT-CTV-AutoSeg
 The baseline and interim PET/CT images were spatially aligned to planning CT images using MIM software (Cleveland, Ohio). All images were resampled to a fixed voxel size of [1.0, 1.0, 2.5] mm using bilinear interpolation. PET and CT volumes were cropped using bounding boxes derived from a SUV threshold of 0.2 on baseline PET images. PET SUVs were standardized using z-score normalization, and CT Hounsfield units were linearly scaled from [-1000, 1000] to [-1, 1].
 
 ## 🧠 Multi-Modality Architecture
-
+![Multi-modality Architecture](./fig/multi_modal.jpg)
 
 ## 🚀 Training
+To train or evaluate the model, please go to each architecture and modify the **`configs/hyper_parameters.yaml`** file to adjust parameters (if preferred) and update the paths for your data root and data list:
+
+Starting training by runing the following command:
 ```bash
-python training/train.py \
-  --config configs/train_swinunetr_late_fusion.yaml
+python run.py
 ```
 
-🔍 Inference
+To run inference, please change the following in the **`configs/hyper_parameters.yaml`** file:
 ```bash
-python inference/run_inference.py \
-  --config configs/infer.yaml \
-  --checkpoint path/to/model.pth
+infer: {enabled: true, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
+    + '/prediction_deform_f3', data_list_key: testing}  
 ```
+We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/6ihu7tjk2yqe75bylyy0t/h?rlkey=79nzdg6ouzx8tddot693z6c1e&st=4jlqmtvi&dl=0). These models have baseline+interim PET/CT and planning CT images as input. 
 
-Sliding-window inference
-
-Gaussian blending
-
-Ensemble averaging
-
-Output: binary CTV mask (NIfTI)
+## Citation 📚
