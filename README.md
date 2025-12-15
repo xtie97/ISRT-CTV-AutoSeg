@@ -88,8 +88,8 @@ We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/6i
 
 
 ## Citation 📚
-- **Blinded clinical reader study**
-- (A) Distribution of quality scores for physician-delineated (green) and model-generated clinical target volumes (CTVs) (red) on 40 external test cases, assessed using a 5-point Likert scale (B–D) Example cases showing physician and model-generated CTVs along with their respective quality scores.
+- Blinded clinical reader study
+  - (A) Distribution of quality scores for physician-delineated (green) and model-generated clinical target volumes (CTVs) (red) on 40 external test cases, assessed using a 5-point Likert scale (B–D) Example cases showing physician and model-generated CTVs along with their respective quality scores.
   
 ![Reader Study](./fig/reader_study.jpg)
 
