@@ -66,7 +66,7 @@ cd ISRT-CTV-AutoSeg
 ## 🧩 Preprocessing 
 The baseline and interim PET/CT images were spatially aligned to planning CT images using MIM software (Cleveland, Ohio). All images were resampled to a fixed voxel size of [1.0, 1.0, 2.5] mm using bilinear interpolation. PET and CT volumes were cropped using bounding boxes derived from a SUV threshold of 0.2 on baseline PET images. PET SUVs were standardized using z-score normalization, and CT Hounsfield units were linearly scaled from [-1000, 1000] to [-1, 1].
 
-## Architecture
+## 🧠 Multi-Modality Architecture
 
 
 ## 🚀 Training
