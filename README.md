@@ -86,7 +86,7 @@ To run inference, please change the following in the **`configs/hyper_parameters
 infer: {enabled: true, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
     + '/prediction_deform_f3', data_list_key: testing}  
 ```
-We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/6ihu7tjk2yqe75bylyy0t/h?rlkey=79nzdg6ouzx8tddot693z6c1e&st=4jlqmtvi&dl=0). These models take baseline+interim PET/CT and planning CT images as input. 
+We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/zao1jjus93bdyz2pdwl1o/AA3EDykCskeTMsQreMBsN2c?rlkey=f7akw1kb9n9dist89vnrkfp4y&st=vgh7736f&dl=0). These models take baseline+interim PET/CT and planning CT images as input. 
 
 
 ## 📊 Key Results
