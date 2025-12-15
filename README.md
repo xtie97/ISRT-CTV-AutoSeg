@@ -14,10 +14,10 @@ The DL model was able to generate clinically useful CTVs with quality comparable
 ## Key Features
 
 - First deep learning framework for automated ISRT CTV delineation in pediatric lymphoma
-- Longitudinal modeling integrating:
--- Planning CT
--- Baseline PET/CT (PET1)
--- Interim PET/CT (PET2)
+- Integrating longitudinal imaging:
+    Planning CT
+    Baseline PET/CT (PET1)
+    Interim PET/CT (PET2)
 - Comparison of CNN-based vs. Transformer-based architectures and early fusion vs. late fusion
 - External validation on 58 patients from 24 institutions
 - Inter-observer variability (IOV) benchmarking against radiation oncologists
