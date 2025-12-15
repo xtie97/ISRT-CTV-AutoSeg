@@ -12,9 +12,7 @@ On the external cohort, a SwinUNETR model incorporating planning CT, PET1, and P
 
 The DL model was able to generate clinically useful CTVs with quality comparable to manually delineated CTVs, suggesting its potential to improve physician efficiency in ISRT planning.
 
----
-
-## ✨ Key Features
+## ✨ Key Points
 
 - **First deep learning framework** developed specifically for automated ISRT CTV delineation in **pediatric Hodgkin lymphoma**
 
