@@ -49,10 +49,10 @@ ISRT-CTV-AutoSeg/
 
 ## ⚙️ Installation
 1. **Clone the Repository**
-```bash
-git clone https://github.com/xtie97/ISRT-CTV-AutoSeg.git
-cd ISRT-CTV-AutoSeg
-```
+    ```bash
+    git clone https://github.com/xtie97/ISRT-CTV-AutoSeg.git
+    cd ISRT-CTV-AutoSeg
+    ```
 
 2. **Pull the Docker image from Docker Hub**:
     ```bash
