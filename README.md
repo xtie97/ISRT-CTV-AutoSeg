@@ -97,7 +97,7 @@ We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/za
 - **Model Comparison**: Quantitative results of CTV segmentation across different models.  
       
 <p align="center">
-  <img src="./fig/model_comparison.jpg" alt="Model Comparison" width="600">
+  <img src="./fig/model_comparison.jpg" alt="Model Comparison" width="700">
 </p>
 
 
@@ -106,14 +106,14 @@ We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/za
   - (B–D) Example cases showing physician and model-generated CTVs along with their respective quality scores.
 
 <p align="center">
-  <img src="./fig/reader_study.jpg" alt="Reader Study">
+  <img src="./fig/reader_study.jpg" alt="Reader Study" width="900">
 </p>
  
 
 - **Example Cases**:  Qualitative comparison between model-generated (*red*) and physician-delineated (*green*) clinical target volumes (CTVs). For patients with positive interim PET findings, cases D and E had slow-responding lesions within the mediastinum, and case F had a slow-responding lesion in the right iliac, which was not captured by the model-generated CTV.
 
 <p align="center">
-  <img src="./fig/sample_cases.jpg" alt="Sample Cases">
+  <img src="./fig/sample_cases.jpg" alt="Sample Cases" width="900">
 </p>
  
 
