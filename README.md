@@ -71,7 +71,6 @@ The baseline and interim PET/CT images were spatially aligned to planning CT ima
 ## 🧠 Multi-Modality Architecture
 **Planning CT only** vs. **Multi-modality early fusion** vs. **Multi-modality late fusion** 
 
-
 ![Multi-modality Architecture](./fig/multi_modal.jpg)
 
 
@@ -97,13 +96,15 @@ We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/za
 ## 📊 Key Results
 - **Model Comparison**: Quantitative results of CTV segmentation across different models.  
       
-![Model Comparison](./fig/model_comparison.jpg)
+<img src="./fig/model_comparison.jpg" alt="Model Comparison" width="500">
+
 
 - **Blinded Clinical Evaluation**: Among the 40 external test cases selected for clinical evaluation, the average quality score assigned to model-generated CTVs was 3.38 (95% CI, [3.08, 3.65]), comparable to the scores assigned to physician-generated CTVs (3.13, 95% CI [2.80, 3.45], P=0.13). Additionally, for model-generated contours, 10 cases (25.0%) required major revisions (score of 2), and 30 cases (75.0%) were considered clinically acceptable (scores of 3-5), with 23 cases (57.5%) requiring only minor or no modifications (scores of 4 or 5).
   - (A) Distribution of quality scores for physician-delineated (green) and model-generated clinical target volumes (CTVs) (red) on 40 external test cases, assessed using a 5-point Likert scale
   - (B–D) Example cases showing physician and model-generated CTVs along with their respective quality scores.
       
 ![Reader Study](./fig/reader_study.jpg)
+
 
 - **Example Cases**:  Qualitative comparison between model-generated (*red*) and physician-delineated (*green*) clinical target volumes (CTVs). For patients with positive interim PET findings, cases D and E had slow-responding lesions within the mediastinum, and case F had a slow-responding lesion in the right iliac, which was not captured by the model-generated CTV.
 
