@@ -96,7 +96,7 @@ We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/za
 ## 📊 Key Results
 - **Model Comparison**: Quantitative results of CTV segmentation across different models.  
       
-<img src="./fig/model_comparison.jpg" alt="Model Comparison" width="500">
+<img src="./fig/model_comparison.jpg" alt="Model Comparison" width="700">
 
 
 - **Blinded Clinical Evaluation**: Among the 40 external test cases selected for clinical evaluation, the average quality score assigned to model-generated CTVs was 3.38 (95% CI, [3.08, 3.65]), comparable to the scores assigned to physician-generated CTVs (3.13, 95% CI [2.80, 3.45], P=0.13). Additionally, for model-generated contours, 10 cases (25.0%) required major revisions (score of 2), and 30 cases (75.0%) were considered clinically acceptable (scores of 3-5), with 23 cases (57.5%) requiring only minor or no modifications (scores of 4 or 5).
