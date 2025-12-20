@@ -69,6 +69,7 @@ The baseline and interim PET/CT images were spatially aligned to planning CT ima
 
 
 ## 🧠 Multi-Modality Architecture
+**Planning CT only** vs. **Multi-modality early fusion** vs. **Multi-modality late fusion** 
 ![Multi-modality Architecture](./fig/multi_modal.jpg)
 
 
