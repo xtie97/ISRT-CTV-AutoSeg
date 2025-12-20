@@ -97,7 +97,7 @@ We released our model weights in [**Dropbox**](https://www.dropbox.com/scl/fo/za
 - **Model Comparison**: Quantitative results of CTV segmentation across different models.  
       
 <p align="center">
-  <img src="./fig/model_comparison.jpg" alt="Model Comparison" width="700">
+  <img src="./fig/model_comparison.jpg" alt="Model Comparison" width="650">
 </p>
 
 
