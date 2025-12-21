@@ -90,7 +90,7 @@ To run inference, please change the following in the **`configs/hyper_parameters
 infer: {enabled: true, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
     + '/prediction_deform_f3', data_list_key: testing}  
 ```
-We released all our model weights associated with this study in [**Huggingface**](https://huggingface.co/xtie/ISRT-CTV-AutoSeg). 
+We released all our model weights associated with this study to [**Huggingface**](https://huggingface.co/xtie/ISRT-CTV-AutoSeg). 
 
 
 ## 📊 Key Results
