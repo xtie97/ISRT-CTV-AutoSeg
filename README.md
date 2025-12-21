@@ -90,8 +90,7 @@ To run inference, please change the following in the **`configs/hyper_parameters
 infer: {enabled: true, ckpt_name: $@ckpt_path + '/' + 'model.pt', output_path: $@bundle_root
     + '/prediction_deform_f3', data_list_key: testing}  
 ```
-We released all our model weights associated with this study to [**Huggingface**](https://huggingface.co/xtie/ISRT-CTV-AutoSeg). 
-
+All model weights associated with this study have been released on [**Hugging Face**](https://huggingface.co/xtie/ISRT-CTV-AutoSeg). The release includes all primary model variants as well as models developed in the ablation study, including different input configurations (planning CT with baseline PET/CT vs. planning CT with baseline and interim PET/CT) and registration strategies (rigid vs. deformable).
 
 ## 📊 Key Results
 - **Model Comparison**: Quantitative results of CTV segmentation across different models.  
