@@ -120,7 +120,16 @@ All model weights associated with this study have been released on [**Hugging Fa
 Extend the current model development and validation framework to other lymphoma subtypes and patient populations and conducting prospective studies to assess the clinical efficiency gains.
 
 ## 📚 Citation
-Tie, X., Milgrom, S.A., Lo, A.C., Charpentier, A.-M., LaRiviere, M.J., Maqbool, D., Cho, S.Y., Kelly, K.M., Hodgson, D., Castellino, S.M., Hoppe, B.S., Bradshaw, T.J., Multi-Modality Artificial Intelligence for Involved-Site Radiation Therapy: Clinical Target Volume Delineation in High-Risk Pediatric Hodgkin Lymphoma. International Journal of Radiation Oncology, Biology, Physics. https://doi.org/10.1016/j.ijrobp.2025.12.005
-
+ 
+```bibtex
+@article{TIE2025,
+title = {Multi-Modality Artificial Intelligence for Involved-Site Radiation Therapy: Clinical Target Volume Delineation in High-Risk Pediatric Hodgkin Lymphoma},
+journal = {International Journal of Radiation Oncology*Biology*Physics},
+year = {2025},
+issn = {0360-3016},
+doi = {https://doi.org/10.1016/j.ijrobp.2025.12.005},
+url = {https://www.sciencedirect.com/science/article/pii/S0360301625065927},
+author = {Xin Tie and Sarah A. Milgrom and Andrea C. Lo and Anne-Marie Charpentier and Michael J. LaRiviere and Danyal Maqbool and Steve Y. Cho and Kara M Kelly and David Hodgson and Sharon M. Castellino and Bradford S. Hoppe and Tyler J. Bradshaw}
+ 
 
 
